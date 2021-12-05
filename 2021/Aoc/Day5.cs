@@ -137,6 +137,7 @@ namespace Aoc
             {
                 this.From = from;
                 this.To = to;
+                this.Points = Segment.CalculatePoints(from, to);
             }
 
             public Point From
@@ -151,23 +152,7 @@ namespace Aoc
 
             public IEnumerable<Point> Points
             {
-                get
-                {
-                    int xChange = (this.From.X == this.To.X) ? 0 : (this.From.X < this.To.X) ? 1 : -1;
-                    int yChange = (this.From.Y == this.To.Y) ? 0 : (this.From.Y < this.To.Y) ? 1 : -1;
-                    
-                    Point point = this.From;
-                    while (true)
-                    {
-                        if ((point.X == this.To.X) && (point.Y == this.To.Y))
-                        {
-                            yield return point;
-                            break;
-                        }
-                        yield return point;
-                        point = new(point.X + xChange, point.Y + yChange);
-                    }
-                }
+                get;
             }
 
             public bool IsHorizontal
@@ -183,6 +168,24 @@ namespace Aoc
                 get
                 {
                     return this.From.X == this.To.X;
+                }
+            }
+
+            private static IEnumerable<Point> CalculatePoints(Point from, Point to)
+            {
+                int xChange = (from.X == to.X) ? 0 : (from.X < to.X) ? 1 : -1;
+                int yChange = (from.Y == to.Y) ? 0 : (from.Y < to.Y) ? 1 : -1;
+                    
+                Point point = from;
+                while (true)
+                {
+                    if ((point.X == to.X) && (point.Y == to.Y))
+                    {
+                        yield return point;
+                        break;
+                    }
+                    yield return point;
+                    point = new(point.X + xChange, point.Y + yChange);
                 }
             }
 
