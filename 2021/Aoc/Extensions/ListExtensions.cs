@@ -18,5 +18,10 @@ namespace Aoc.Extensions
                 index += 1;
             }
         }
+
+        public static T Middle<T>(this List<T> list)
+        {
+            return list.Count % 2 is 0 ? list[(list.Count / 2) - 1] : list[(int)Math.Floor((float)list.Count / 2)];
+        }
     }
 }
