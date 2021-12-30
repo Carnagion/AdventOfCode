@@ -46,5 +46,10 @@ namespace Aoc.Extensions
                 _ => 0,
             };
         }
+
+        public static bool IsDigit(this char character)
+        {
+            return (character - '0').IsBetweenInclusive(0, 9);
+        }
     }
 }

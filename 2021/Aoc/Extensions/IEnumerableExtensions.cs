@@ -9,5 +9,10 @@ namespace Aoc.Extensions
         {
             return values.All(value => source.Contains(value));
         }
+
+        public static bool ContainsAny<T>(this IEnumerable<T> source, IEnumerable<T> values)
+        {
+            return values.Any(value => source.Contains(value));
+        }
     }
 }
