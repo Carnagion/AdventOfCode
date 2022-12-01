@@ -18,6 +18,5 @@ getPuzzleInput :: Int -> IO String
 getPuzzleInput day = readFile $ "Inputs/" ++ show day ++ ".txt"
 
 getSolution :: Int -> Int -> String -> String
-getSolution 1 1 inp = Days.One.partOne inp
-getSolution 1 2 inp = Days.One.partTwo inp
-getSolution _ _ _ = "Invalid day or part"
+getSolution 1 = Days.One.solve
+getSolution _ = const $ const "Invalid day"

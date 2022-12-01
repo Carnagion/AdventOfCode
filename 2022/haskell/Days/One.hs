@@ -1,16 +1,14 @@
 module Days.One (
-    partOne,
-    partTwo
+    solve,
 ) where
 
 import Data.List (sort)
 import Data.List.Split (splitOn)
 
-partOne :: String -> String
-partOne = show . maximum . parseCalories . filterCalories . splitCalories
-
-partTwo :: String -> String
-partTwo = show . sum . take 3 . reverse . sort . parseCalories . filterCalories . splitCalories
+solve :: Int -> String -> String
+solve 1 = show . maximum . parseCalories . filterCalories . splitCalories
+solve 2 = show . sum . take 3 . reverse . sort . parseCalories . filterCalories . splitCalories
+solve _ = const "Invalid part"
 
 splitCalories :: String -> [[String]]
 splitCalories = map (splitOn "\n") . splitOn "\n\n"
