@@ -1,0 +1,23 @@
+cabal-version: 2.4
+name: Aoc
+version: 0.1.0
+
+synopsis: Solutions to Advent of Code 2022 in Haskell.
+description: Solutions to Advent of Code 2022 in Haskell.
+
+bug-reports: https://github.com/Carnagion/AdventOfCode/issues
+
+license: MIT
+author: Indraneel Mahendrakumar
+maintainer: indraneel.mahendrakumar@gmail.com
+copyright: (c) Indraneel mahendrakumar
+
+executable haskell
+    hs-source-dirs: .
+    main-is: Main.hs
+    other-modules:
+        Days.One
+    build-depends:
+        base ^>=4.14.3.0,
+        split ^>=0.2.3.5
+    default-language: Haskell2010
