@@ -1,4 +1,10 @@
-*.sln
-*.idea
-obj/
-bin/
+# JetBrains
+**/.idea
+
+# C#
+**/*.sln
+**/obj/
+**/bin/
+
+# Haskell
+**/dist-newstyle
