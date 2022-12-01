@@ -2,7 +2,7 @@ module Main (
     main,
 ) where
 
-import System.Environment
+import System.Environment (getArgs)
 
 import Days.One
 
@@ -20,4 +20,4 @@ getPuzzleInput day = readFile $ "Inputs/" ++ show day ++ ".txt"
 getSolution :: Int -> Int -> String -> String
 getSolution 1 1 inp = Days.One.partOne inp
 getSolution 1 2 inp = Days.One.partTwo inp
-getSolution _ _ _ = "Invalid day"
+getSolution _ _ _ = "Invalid day or part"

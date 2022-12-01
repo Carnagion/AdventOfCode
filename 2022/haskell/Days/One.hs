@@ -13,7 +13,7 @@ partTwo :: String -> String
 partTwo = show . sum . take 3 . reverse . sort . parseCalories . filterCalories . splitCalories
 
 splitCalories :: String -> [[String]]
-splitCalories inp = map (splitOn "\n") (splitOn "\n\n" inp)
+splitCalories = map (splitOn "\n") . splitOn "\n\n"
 
 filterCalories :: [[String]] -> [[String]]
 filterCalories = filter (not . null) . map (filter (not . null))
