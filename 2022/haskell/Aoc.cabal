@@ -18,6 +18,7 @@ executable haskell
     other-modules:
         Days.One
         Days.Two
+        Days.Three
     build-depends:
         base ^>=4.14.3.0,
         split ^>=0.2.3.5

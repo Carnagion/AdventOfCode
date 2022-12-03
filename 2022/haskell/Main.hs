@@ -6,6 +6,7 @@ import System.Environment (getArgs)
 
 import Days.One (solve)
 import Days.Two (solve)
+import Days.Three (solve)
 
 main :: IO ()
 main = do
@@ -21,4 +22,5 @@ getPuzzleInput day = readFile $ "Inputs/" ++ show day ++ ".txt"
 getSolution :: Int -> Int -> String -> String
 getSolution 1 = Days.One.solve
 getSolution 2 = Days.Two.solve
+getSolution 3 = Days.Three.solve
 getSolution _ = const $ const "Invalid day"
