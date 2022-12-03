@@ -1,5 +1,5 @@
 cabal-version: 2.4
-name: Aoc
+name: aoc
 version: 0.1.0
 
 synopsis: Solutions to Advent of Code 2022 in Haskell.
@@ -12,12 +12,12 @@ author: Indraneel Mahendrakumar
 maintainer: indraneel.mahendrakumar@gmail.com
 copyright: (c) Indraneel mahendrakumar
 
-executable haskell
+executable aoc
     hs-source-dirs: .
     main-is: Main.hs
     other-modules:
-        Days.One
-        Days.Two
+        Days.One,
+        Days.Two,
         Days.Three
     build-depends:
         base ^>=4.14.3.0,
