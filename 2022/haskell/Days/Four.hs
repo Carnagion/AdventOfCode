@@ -26,7 +26,7 @@ parseRange str = let [lower, upper] = splitOn "-" str
     in Range (read lower) (read upper)
 
 splitAssignments :: String -> [[String]]
-splitAssignments = map (splitOn ","). filter (not . null) . lines
+splitAssignments = map (splitOn ",") . filter (not . null) . lines
 
 parseAssignments :: [[String]] -> [(Range, Range)]
 parseAssignments = map (\ strs -> (parseRange $ head strs, parseRange $ strs !! 1))
