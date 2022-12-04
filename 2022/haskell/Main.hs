@@ -7,6 +7,7 @@ import System.Environment (getArgs)
 import Days.One (solve)
 import Days.Two (solve)
 import Days.Three (solve)
+import Days.Four (solve)
 
 main :: IO ()
 main = do
@@ -23,4 +24,5 @@ getSolution :: Int -> Int -> String -> String
 getSolution 1 = Days.One.solve
 getSolution 2 = Days.Two.solve
 getSolution 3 = Days.Three.solve
+getSolution 4 = Days.Four.solve
 getSolution _ = const $ const "Invalid day"
