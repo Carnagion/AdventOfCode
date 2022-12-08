@@ -27,10 +27,10 @@ isVisible g (x, r, c)
 
 scenicScore :: [[(Int, Int, Int)]] -> (Int, Int, Int) -> Int
 scenicScore g (x, r, c) = let
-        bmap = bimap (map fstt . reverse) (map fstt . tail)
-        (befH, aftH) = bmap (splitAt c (g !! r))
-        (befV, aftV) = bmap (splitAt r (map (!! c) g))
-        in length (takeUnblocking x befH) * length (takeUnblocking x aftH) * length (takeUnblocking x befV) * length (takeUnblocking x aftV)
+    bmap = bimap (map fstt . reverse) (map fstt . tail)
+    (befH, aftH) = bmap (splitAt c (g !! r))
+    (befV, aftV) = bmap (splitAt r (map (!! c) g))
+    in length (takeUnblocking x befH) * length (takeUnblocking x aftH) * length (takeUnblocking x befV) * length (takeUnblocking x aftV)
 
 fstt :: (a, b, c) -> a
 fstt (a, _, _) = a
