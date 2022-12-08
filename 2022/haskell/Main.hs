@@ -16,10 +16,13 @@ import Days.Eight (solve)
 main :: IO ()
 main = do
     args <- getArgs
-    let day = read $ head args
-    let part = read $ args !! 1
-    input <- getPuzzleInput day
-    print $ getSolution day part input
+    case args of
+        [dayStr, partStr, file] -> do
+            inp <- readFile file
+            let day = read dayStr
+            let part = read partStr
+            print $ getSolution day part inp
+        _ -> print "Invalid usage"
 
 getPuzzleInput :: Int -> IO String
 getPuzzleInput day = readFile $ "Inputs/" ++ show day ++ ".txt"
