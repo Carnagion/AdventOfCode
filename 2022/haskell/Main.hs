@@ -13,6 +13,7 @@ import Days.Six (solve)
 import Days.Seven (solve)
 import Days.Eight (solve)
 import Days.Nine (solve)
+import Days.Ten (solve)
 
 main :: IO ()
 main = do
@@ -22,7 +23,7 @@ main = do
             inp <- readFile file
             let day = read dayStr
             let part = read partStr
-            print $ getSolution day part inp
+            putStrLn $ getSolution day part inp
         _ -> print "Invalid usage"
 
 getPuzzleInput :: Int -> IO String
@@ -38,4 +39,5 @@ getSolution 6 = Days.Six.solve
 getSolution 7 = Days.Seven.solve
 getSolution 8 = Days.Eight.solve
 getSolution 9 = Days.Nine.solve
+getSolution 10 = Days.Ten.solve
 getSolution _ = const $ const "Invalid day"

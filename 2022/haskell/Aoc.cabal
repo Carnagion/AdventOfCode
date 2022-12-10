@@ -24,7 +24,8 @@ executable aoc
         Days.Six,
         Days.Seven,
         Days.Eight,
-        Days.Nine
+        Days.Nine,
+        Days.Ten
     build-depends:
         base ^>=4.14.3.0,
         split ^>=0.2.3.5
