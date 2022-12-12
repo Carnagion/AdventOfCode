@@ -1,5 +1,6 @@
 # JetBrains
 **/.idea/
+**/*.iml
 
 # C#
 **/*.sln
@@ -11,3 +12,7 @@
 
 # Lean
 **/build/
+
+# Rust
+**/Cargo.lock
+**/target/
