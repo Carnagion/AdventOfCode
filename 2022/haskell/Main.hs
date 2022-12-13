@@ -15,6 +15,7 @@ import Days.Eight (solve)
 import Days.Nine (solve)
 import Days.Ten (solve)
 import Days.Eleven (solve)
+import Days.Thirteen (solve)
 
 main :: IO ()
 main = do
@@ -42,4 +43,5 @@ getSolution 8 = Days.Eight.solve
 getSolution 9 = Days.Nine.solve
 getSolution 10 = Days.Ten.solve
 getSolution 11 = Days.Eleven.solve
+getSolution 13 = Days.Thirteen.solve
 getSolution _ = const $ const "Invalid day"
