@@ -27,9 +27,13 @@ executable aoc
         Days.Nine,
         Days.Ten,
         Days.Eleven,
-        Days.Thirteen
+        Days.Thirteen,
+        Days.Fourteen,
+        Days.Fifteen
     build-depends:
         base,
+        containers,
         megaparsec,
+        range,
         split
     default-language: Haskell2010
