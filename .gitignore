@@ -1,18 +1,17 @@
 # JetBrains
-**/.idea/
-**/*.iml
+.idea/
+*.iml
 
 # C#
-**/*.sln
-**/obj/
-**/bin/
+*.sln
+obj/
+bin/
 
 # Haskell
-**/dist-newstyle/
+dist-newstyle/
 
 # Lean
-**/build/
+build/
 
 # Rust
-**/Cargo.lock
-**/target/
+target/
