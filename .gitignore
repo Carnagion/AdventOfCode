@@ -15,3 +15,6 @@ build/
 
 # Rust
 target/
+
+# Advent of Code inputs
+inputs/
