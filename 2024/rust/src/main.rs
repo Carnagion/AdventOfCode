@@ -2,7 +2,7 @@
 
 use std::fs;
 
-mod days;
+pub mod days;
 
 fn main() {
     let input = fs::read_to_string("../inputs/1.txt").expect("input not available");
