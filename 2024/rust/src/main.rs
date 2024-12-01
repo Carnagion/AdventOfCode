@@ -1,8 +1,6 @@
-#![feature(cmp_minmax)]
-
 use std::fs;
 
-pub mod days;
+use aoc::days;
 
 fn main() {
     let input = fs::read_to_string("../inputs/1.txt").expect("input not available");

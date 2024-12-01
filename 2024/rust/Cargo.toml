@@ -4,3 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+divan = "0.1.16"
+
+[[bench]]
+name = "one"
+harness = false
