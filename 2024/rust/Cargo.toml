@@ -9,3 +9,7 @@ divan = "0.1.16"
 [[bench]]
 name = "one"
 harness = false
+
+[[bench]]
+name = "two"
+harness = false
