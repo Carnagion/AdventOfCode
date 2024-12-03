@@ -5,6 +5,7 @@ edition = "2021"
 
 [dependencies]
 divan = "0.1.16"
+regex = "1.11.1"
 
 [[bench]]
 name = "one"
@@ -12,4 +13,8 @@ harness = false
 
 [[bench]]
 name = "two"
+harness = false
+
+[[bench]]
+name = "three"
 harness = false
