@@ -1,20 +1,15 @@
 use std::{cmp, collections::HashMap, iter};
 
 pub fn part_one(input: &str) -> u64 {
-    let [mut left, mut right] = input
+    let (mut left, mut right) = input
         .lines()
         .map(|line| {
             let mut nums = line.split_ascii_whitespace();
-            (
-                nums.next().unwrap().parse::<u64>().unwrap(),
-                nums.next().unwrap().parse::<u64>().unwrap(),
-            )
+            let l = nums.next().unwrap().parse::<u64>().unwrap();
+            let r = nums.next().unwrap().parse::<u64>().unwrap();
+            (l, r)
         })
-        .fold([Vec::new(), Vec::new()], |mut lists, nums| {
-            lists[0].push(nums.0);
-            lists[1].push(nums.1);
-            lists
-        });
+        .unzip::<_, _, Vec<_>, Vec<_>>();
 
     left.sort_unstable();
     right.sort_unstable();
@@ -32,10 +27,9 @@ pub fn part_two(input: &str) -> u64 {
         .lines()
         .map(|line| {
             let mut nums = line.split_ascii_whitespace();
-            (
-                nums.next().unwrap().parse::<u64>().unwrap(),
-                nums.next().unwrap().parse::<u64>().unwrap(),
-            )
+            let l = nums.next().unwrap().parse::<u64>().unwrap();
+            let r = nums.next().unwrap().parse::<u64>().unwrap();
+            (l, r)
         })
         .fold(
             (Vec::new(), HashMap::<u64, u64>::new()),
