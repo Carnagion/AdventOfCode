@@ -38,3 +38,7 @@ harness = false
 [[bench]]
 name = "eight"
 harness = false
+
+[[bench]]
+name = "nine"
+harness = false
